@@ -42,11 +42,11 @@ export default function Textform(props) {
                     <label htmlFor="myBox" className="form-label"></label>
                     <textarea className="form-control" placeholder='Enter text here' value={text} onChange={handleOnChange} id="myBox" rows="3"></textarea>
                 </div>
-                <button disabled={text.length === 0} className="btn btn-primary mx-3 my-2" onClick={handleUpClick}>Convert to Uppercase</button>
-                <button disabled={text.length === 0} className="btn btn-primary mx-3 my-2" onClick={handleLowClick}>Convert to Lowercase</button>
-                <button disabled={text.length === 0} className="btn btn-primary mx-3 my-2" onClick={handleClearClick}>Clear Text</button>
-                <button disabled={text.length === 0} className="btn btn-primary mx-3 my-2" onClick={handleFindNum}>Find Number</button>
-                <button disabled={text.length === 0} className="btn btn-primary mx-3 my-2" onClick={handleCopy}>Copy Text</button>
+                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleUpClick}>Convert to Uppercase</button>
+                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleLowClick}>Convert to Lowercase</button>
+                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleClearClick}>Clear Text</button>
+                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleFindNum}>Find Number</button>
+                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleCopy}>Copy Text</button>
             </div>
             <div className="container my-3">
                 <h1>Your text summary</h1>
