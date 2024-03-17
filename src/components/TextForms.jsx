@@ -37,10 +37,10 @@ export default function Textform(props) {
     return (
         <>
             <div>
-                <h1>Enter Text to analyze</h1>
+                <h1 className='text-4xl font-extrabold dark:text my-5'>Enter Text to analyze</h1>
                 <div className="mb-3">
                     <label htmlFor="myBox" className="form-label"></label>
-                    <textarea className="form-control" placeholder='Enter text here' value={text} onChange={handleOnChange} id="myBox" rows="3"></textarea>
+                    <textarea className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='Enter text here' value={text} onChange={handleOnChange} id="myBox" rows="3"></textarea>
                 </div>
                 <button
                     type="button"
@@ -79,10 +79,10 @@ export default function Textform(props) {
                     onClick={handleCopy}>Copy Text</button>
             </div>
             <div className="container my-3">
-                <h1>Your text summary</h1>
+                <h1 className='text-4xl font-extrabold dark:text my-5'>Your text summary</h1>
                 <p>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words and {charLength(text)} characters</p>
                 <p className='mt-2'>This Paragraph can be read in {0.008 * text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} minutes</p>
-                <h2>Preview</h2>
+                <h1 className='text-4xl font-extrabold dark:text my-5'>Preview</h1>
                 <p class="text-break">{text.length > 0 ? text : "Enter text above to preview here"}</p>
             </div>
         </>
