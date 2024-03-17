@@ -36,17 +36,47 @@ export default function Textform(props) {
     }
     return (
         <>
-            <div className="container" >
+            <div>
                 <h1>Enter Text to analyze</h1>
                 <div className="mb-3">
                     <label htmlFor="myBox" className="form-label"></label>
                     <textarea className="form-control" placeholder='Enter text here' value={text} onChange={handleOnChange} id="myBox" rows="3"></textarea>
                 </div>
-                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleUpClick}>Convert to Uppercase</button>
-                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleLowClick}>Convert to Lowercase</button>
-                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleClearClick}>Clear Text</button>
-                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleFindNum}>Find Number</button>
-                <button disabled={text.length === 0} className="btn btn-outline-info mx-3 my-2" onClick={handleCopy}>Copy Text</button>
+                <button
+                    type="button"
+                    disabled={text.length === 0}
+                    className={`text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2
+                ${text.length === 0 ?
+                            "text-white bg-blue-400 dark:bg-blue-500 cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center" : ''}`}
+                    onClick={handleUpClick}>Convert to Uppercase</button>
+                <button
+                    type="button"
+                    disabled={text.length === 0}
+                    className={`text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2
+                ${text.length === 0 ?
+                            "text-white bg-blue-400 dark:bg-blue-500 cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center" : ''}`}
+                    onClick={handleLowClick}>Convert to Lowercase</button>
+                <button
+                    type="button"
+                    disabled={text.length === 0}
+                    className={`text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2
+                ${text.length === 0 ?
+                            "text-white bg-blue-400 dark:bg-blue-500 cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center" : ''}`}
+                    onClick={handleClearClick}>Clear Text</button>
+                <button
+                    type="button"
+                    disabled={text.length === 0}
+                    className={`text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2
+                ${text.length === 0 ?
+                            "text-white bg-blue-400 dark:bg-blue-500 cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center" : ''}`}
+                    onClick={handleFindNum}>Find Number</button>
+                <button
+                    type="button"
+                    disabled={text.length === 0}
+                    className={`text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2
+                ${text.length === 0 ?
+                            "text-white bg-blue-400 dark:bg-blue-500 cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center" : ''}`}
+                    onClick={handleCopy}>Copy Text</button>
             </div>
             <div className="container my-3">
                 <h1>Your text summary</h1>

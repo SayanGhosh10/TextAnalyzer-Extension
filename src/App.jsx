@@ -4,7 +4,7 @@ import Textform from './components/TextForms.jsx'
 
 const App = () => {
   return (
-    <div>
+    <div className='container mx-10 my-10'>
       <Textform />
     </div>
   )
